@@ -8,14 +8,12 @@
 ## API Endpoints
 
 ### account-service (http://localhost:8085)
-- `GET /api/v1/accounts` → Get all accounts
-- `GET /api/v1/accounts/{id}` → Get account by ID
-- `POST /api/v1/accounts` → Create a new account
+- `GET /api/v1/accounts/{accountNumber}/transactions` → Get account and all linked transactions
+- `GET /api/v1/accounts/{accountNumber}` → Get account by accountNumber
+- `POST /api/v1/accounts/create` → Create a new account
 
 ### transaction-service (http://localhost:8086)
-- `GET /api/v1/transactions` → Get all transactions
-- `GET /api/v1/transactions/{id}` → Get transaction by ID
-- `POST /api/v1/transactions` → Create a new transaction
+- `GET /api/v1/transactions/{accountNumber}` → Get transaction for accountNumber
 
 ### gateway (http://localhost:8088)
 - `GET /api/v1/accounts` → Routes to **account-service**
